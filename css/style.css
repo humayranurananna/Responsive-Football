@@ -6,3 +6,43 @@ body{
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
+/* ------------------
+    header style 
+---------------------*/
+.banner-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#2D25A0;
+    padding: 100px 0 86px 0;
+}
+.section-title{
+    font-size: 64px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+    margin-right: 50px;
+}
+.banner-image img{
+    width: 556px;
+    height: 438px;
+}
+button{
+    display: flex;
+    align-items: center;
+    padding: 10px 24px;
+    background-color: #E02C6D;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    margin-top: 27px;
+    transition: 1.7s;
+}
+button p{
+    margin: 0 8px 0 0;
+}
+button:hover{
+    background-color: yellowgreen;
+    transform: translate(40px) scale(1.1);
+}
