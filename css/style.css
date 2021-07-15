@@ -1,7 +1,7 @@
 /* font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
-/* common styles & utilities */
+/* common styles */
 body{
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -14,35 +14,281 @@ body{
     justify-content: center;
     align-items: center;
     background-color:#2D25A0;
-    padding: 100px 0 86px 0;
+    padding: 150px 0;
 }
-.section-title{
-    font-size: 64px;
+.banner-area .section-details{
+    margin-right: 5%;
+}
+.banner-area .section-title{
+    font-size: 60px;
     font-weight: 700;
     color: #FFFFFF;
     margin: 0;
-    margin-right: 50px;
 }
-.banner-image img{
-    width: 556px;
-    height: 438px;
-}
-button{
-    display: flex;
-    align-items: center;
+.section-details a{
     padding: 10px 24px;
     background-color: #E02C6D;
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 500;
     border: none;
-    margin-top: 27px;
-    transition: 1.7s;
+    margin-top: 5%;
+    transition: 1.5s; 
+    text-decoration: none;
+    display: inline-block;
 }
-button p{
-    margin: 0 8px 0 0;
-}
-button:hover{
+.section-details a:hover{
     background-color: yellowgreen;
     transform: translate(40px) scale(1.1);
+} 
+.banner-image img{
+    width: 556px;
+    height: 438px;
+    animation: img-anim 2s ease-out 
+    infinite;
 }
+@keyframes img-anim{
+    from{
+        width: 556px;
+        height: 438px;
+    }
+    to{
+        transform: rotate(45deg);
+    }   
+}
+
+/* ----------------------
+    players section style 
+-------------------------- */
+.players{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+}
+.players-unit-1,.players-unit-2,.players-unit-3,.players-unit-4{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 30px;
+    width: 1050px;
+}
+.player{
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    margin-bottom: 27px;
+    padding: 15px;
+}
+.player img{
+    width: 100%;
+}
+.player-name{
+    font-size: 28px;
+    font-weight: 700;
+    color: #18191F;
+    margin-top: 16px;
+    margin-bottom: 5px;
+}
+.player p{
+    color: #6C6C6C;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+/* ----------------------
+    funfact section style 
+-------------------------- */
+.funfact-area{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 80px 0 80px 0;
+    background-color: #10437A;
+    color: #FFFFFF;
+    margin: 82px 0; 
+    box-shadow: 0px 0px 10px #29313a;
+}
+.funfact-area .funfact-item{
+    width: 160px;
+    border: 1px solid #FFFFFF;
+    padding: 16px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.funfact-area .number{
+    font-size: 35px;
+    font-weight: 500;
+    margin: 0;
+}
+.funfact-area .funfact-name{
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+/* ----------------------
+    blog section style 
+-------------------------- */
+.latest-blog{
+    padding: 0 0 70px 0;
+}
+
+.latest-blog .section-title{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;  
+    margin-top: 0;
+}
+.blogs{
+    display: flex;
+    justify-content: center;
+}
+.blog{
+    width: 290px;
+    padding: 15px;
+    margin: 2%;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px rgba(39, 16, 16, 0.08);
+}
+.blog img{
+    width: 100%;
+    border-radius: 5px;
+}
+.blog-title{
+    margin-top: 10px;
+    color: #9F9F9F;
+    font-size: 16px;
+    font-weight: 500;
+}
+.blog-detail p{
+    font-size: 14px;
+    font-weight: 500;
+}
+.blog-author{
+    color: orangered;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+/* ----------------------
+    footer section style 
+-------------------------- */
+footer{
+    text-align: center;
+    margin-bottom: 42px;
+}
+footer img{
+    width: 483px;
+    height: 110px;
+}
+.social-icons{
+    margin-top: 20px;
+}
+.social-icons a{
+    color: #8e92a1;
+    background-color: rgba(0,0,0,.1);
+    padding: 7px 11px;
+    margin: 0 5px;
+    border-radius: 50%;
+}
+footer p{
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+/* ------------------
+    Media Queries
+--------------------- */
+
+/* Mobile devices */
+@media only screen and (max-width:688px) {
+    /* ------------------
+        header style 
+    ---------------------*/
+    .banner-area{
+        padding: 112px 0 62px 0;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .banner-area .section-title{
+        font-size: 36px;
+        margin-left: 16px;
+    }
+    .section-details a{
+        margin: 30px 0 0 19px;
+    }
+    .banner-image{
+        margin-top: 50px;
+    }
+    .banner-image img{
+        width: 329px;
+        height: 259px;
+        margin: 0;
+        animation: img-anim 2s ease-out 
+        infinite;
+    }
+    @keyframes img-anim{
+        from{
+            width: 329px;
+            height: 259px;  
+        }
+        to{
+            transform: rotate(45deg);
+        }   
+    }
+    /* ----------------------
+        players section style 
+    -------------------------- */
+    .players{
+        margin-top: 47px;
+        overflow: hidden;
+    }
+    .players-unit-1,.players-unit-2,.players-unit-3,.players-unit-4{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        width: 300px;
+    }
+    .player{
+        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+        margin-bottom: 24px;
+    }
+    /* ----------------------
+        funfact section style 
+    -------------------------- */
+    .funfact-area{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+    .funfact-area .funfact-item{
+        width: 160px;
+        text-align: center;
+        margin-bottom: 10%;
+    }
+    /* ----------------------
+        blog section style 
+    -------------------------- */
+    .latest-blog{
+        padding: 0 0 50px 0;
+        overflow: hidden;
+    }
+    .blogs{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* ----------------------
+        footer section style 
+    -------------------------- */
+    footer{
+        width: 100%;
+        margin-bottom: 30px;
+        overflow: hidden;
+    }
+    footer img{
+        width: 250px;
+        height: auto;
+    }
+    
+}
+
